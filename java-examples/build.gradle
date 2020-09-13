@@ -33,3 +33,12 @@ idea {
     }
 }
 
+mainClassName = "com.piotrglazar.ExampleRunner"
+
+tasks.withType(JavaCompile).each {
+    it.options.compilerArgs.add('--enable-preview')
+}
+
+test {
+    jvmArgs(['--enable-preview'])
+}
