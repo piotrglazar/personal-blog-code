@@ -12,6 +12,7 @@ public class ExampleRunner {
     public static void main(String[] args) {
         patternMatching();
         ranges();
+        textBlocks();
     }
 
     private static void patternMatching() {
@@ -28,5 +29,10 @@ public class ExampleRunner {
         } catch (InvalidRangeBoundariesException e) {
             LOGGER.info(e.getMessage());
         }
+    }
+
+    private static void textBlocks() {
+        LOGGER.info(TextBlocks.LATIN_TEXT);
+        LOGGER.info(TextBlocks.MULTILINE_TEXT);
     }
 }
